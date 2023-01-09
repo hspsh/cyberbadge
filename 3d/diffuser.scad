@@ -18,14 +18,17 @@ module led() {
     square([led_w, led_h]);
 }
 
+module matrix_courtyard () {
+    import("matrix_courtyard.svg");
+}
 
 module matrix_diffuser () {
     difference() {
-    import("matrix_courtyard.svg");
-    translate([0.53,10.78])
+    offset(r=E/2) matrix_courtyard ();
+    translate([0.53,10.8])
     for (j = [0:M-1]) {
     for (i = [0:N-1]) {
-        translate([j * led_w, i * led_h, 0]) offset(r=-E/3) led();
+        translate([j * led_w, i * led_h, 0]) offset(r=-E/2) led();
     }
     }
     }
@@ -38,7 +41,11 @@ module outer_outline(r=E) {
 
 module cover() {
     linear_extrude(L*3)
-    outer_outline();
+    difference () {
+        outer_outline();
+        matrix_courtyard();
+    }
+
     
     linear_extrude(2)
     difference() {
@@ -50,6 +57,11 @@ module cover() {
     difference() {
         outer_outline();
         pcb();
+    }
+    
+        
+    linear_extrude(L) {
+        matrix_courtyard();
     }
     
     linear_extrude(2)
