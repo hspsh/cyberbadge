@@ -1,3 +1,5 @@
+commit="aa9f697";
+
 include <diffuser.scad>
 
 /*skew takes an array of six angles:
@@ -107,9 +109,13 @@ module backplate() {
             translate([20,24,author_height]) linear_extrude(2*L) 
                 text("sf: Goggi", size=author_size, font="Iosevka:style=Extended");
             translate([20,17,author_height]) linear_extrude(2*L) 
-                text("hw: critbit", size=author_size, font="Iosevka:style=Extended");
+                text("hw: cr1tbit", size=author_size, font="Iosevka:style=Extended");
             translate([20,10,author_height]) linear_extrude(2*L) 
                 text("3d: not7CD", size=author_size, font="Iosevka:style=Extended");
+            if(commit) {
+                translate([105,36,author_height]) rotate([0,0,-90]) linear_extrude(2*L) 
+                    text(commit, size=author_size, font="Iosevka:style=Extended");
+            }
         }
     }
 }
