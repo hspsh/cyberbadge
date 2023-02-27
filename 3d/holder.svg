@@ -41,9 +41,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="cm"
      showgrid="false"
-     inkscape:zoom="0.84687446"
-     inkscape:cx="298.15517"
-     inkscape:cy="64.944691"
+     inkscape:zoom="12.666612"
+     inkscape:cx="264.83009"
+     inkscape:cy="69.23714"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -70,4 +70,22 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <circle
+     style="fill:#000000;stroke:#000000;stroke-width:455083;stroke-linejoin:bevel;paint-order:fill markers stroke"
+     id="path765"
+     cx="54045600"
+     cy="18050230"
+     r="734049.44" />
+  <circle
+     style="fill:#000000;stroke:#000000;stroke-width:455083;stroke-linejoin:bevel;paint-order:fill markers stroke"
+     id="path765-5"
+     cx="65856288"
+     cy="18148950"
+     r="734049.44" />
+  <circle
+     style="fill:#000000;stroke:#000000;stroke-width:455083;stroke-linejoin:bevel;paint-order:fill markers stroke"
+     id="path765-3"
+     cx="77503680"
+     cy="18024518"
+     r="734049.44" />
 </svg>
