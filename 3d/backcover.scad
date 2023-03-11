@@ -1,4 +1,4 @@
-commit="aa9f697";
+commit="92ba59a";
 
 include <diffuser.scad>
 
@@ -21,7 +21,7 @@ multmatrix(matrix)
 children();
 }
 
-height_back = 4*L + .5;
+height_back = 8*L;
 
 module mounts_courtyard() {
     color("green") offset(r=0.4) import("mounts_courtyard.svg");
@@ -99,11 +99,11 @@ module backplate() {
             
             // strap hole
             translate([121,25,height_back+4]) rotate([90,0,0]) difference() {
-                cylinder(h=4, d=5, $fn=30);
+                cylinder(h=4, d=6, $fn=30);
                 cylinder(h=10, d=3, $fn=30);
             }
             author_size = 4.5;
-            author_height = height_back+5-4*L;
+            author_height = 5.7;
             translate([20,31,author_height]) linear_extrude(2*L) 
                 text("2023", size=author_size, font="Iosevka:style=Extended");
             translate([20,24,author_height]) linear_extrude(2*L) 
