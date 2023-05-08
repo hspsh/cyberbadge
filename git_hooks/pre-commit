@@ -1,4 +1,6 @@
 #!/usr/bin/env bash 
 
-echo "Hello"
+echo 'commit="' > ./3d/commit.scad
+git rev-parse --short HEAD >> ./3d/commit.scad
+echo '";' >> ./3d/commit.scad
 

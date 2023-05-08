@@ -1,4 +1,4 @@
-commit="8ef4eea";
+include <commit.scad>
 
 include <diffuser.scad>
 
@@ -21,8 +21,10 @@ multmatrix(matrix)
 children();
 }
 
-height_back = 8*L;
-hl = 5.7;
+height_back = 6*L;
+hl = 5.8;
+
+back_wall_w = 1;
 
 module mounts_courtyard() {
     color("green") offset(r=0.4) import("mounts_courtyard.svg");
@@ -126,4 +128,7 @@ module backplate() {
 
 
 //#color("grey") faceplate();
+difference() {
 backplate();
+    cube([100,100,100], true);
+}
