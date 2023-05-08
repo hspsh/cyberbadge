@@ -1,7 +1,7 @@
-include <commit.scad>
 
 include <diffuser.scad>
 
+include <commit.scad>
 /*skew takes an array of six angles:
  *x along y
  *x along z
