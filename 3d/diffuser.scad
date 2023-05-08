@@ -16,7 +16,7 @@ led_w = pitch;
 face_height = L*3;  // transparent diffuser face
 pcb_height = 3; // PCB dist from diffures
 height = pcb_height + 3;
-button_height = 3 - 1.6 - 0.3;
+button_height = 3 - 1.6 - 0.4;
 
 has_holder = false;
 
@@ -60,7 +60,7 @@ module holes() {
 module holes_standoffs () {
     color("orange") difference () {
         offset(r=1.8) import("holes.svg");
-        offset(r=-0.5) import("holes.svg");
+        offset(r=-0.4) import("holes.svg");
     }
 }
 
@@ -150,4 +150,4 @@ module faceplate() {
 
 //cover();
 //model();
-//faceplate();
+faceplate();

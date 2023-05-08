@@ -128,7 +128,5 @@ module backplate() {
 
 
 //#color("grey") faceplate();
-difference() {
+
 backplate();
-    cube([100,100,100], true);
-}
