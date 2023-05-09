@@ -128,5 +128,7 @@ module backplate() {
 
 
 //#color("grey") faceplate();
-
+difference() {
 backplate();
+    translate([0,.2,1.2]) notch();
+}

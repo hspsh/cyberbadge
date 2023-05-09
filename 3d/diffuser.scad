@@ -146,8 +146,12 @@ module faceplate() {
         //translate([18, 3.3]) linear_extrude(L) text("CyberBadge 1.0.0", size=3, font="Iosevka");
     }
 }
+module notch () {
+translate([-73,43.5,5.4]) rotate([0,90,0]) cylinder(10,r=0.7,true, $fn=20);
+}
 
 
 //cover();
 //model();
 //faceplate();
+//notch();
