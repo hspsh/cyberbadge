@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 1.6,
+          "width": 2.18
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -45,7 +45,6 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "45_degree_only": false,
           "min_clearance": 0.19999999999999998
         }
       },
@@ -56,27 +55,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "courtyards_overlap|103350001|102750001|3d56a4d1-f8de-483c-b7b1-5336dfb2fdd6|4096311c-a683-4832-a25a-7543903d9789",
-        "courtyards_overlap|103350001|102750001|4096311c-a683-4832-a25a-7543903d9789|3d56a4d1-f8de-483c-b7b1-5336dfb2fdd6",
-        "courtyards_overlap|103849999|104850001|b995f150-1570-4a2c-9053-b7e5b058a340|4096311c-a683-4832-a25a-7543903d9789",
-        "courtyards_overlap|104009999|107849999|b995f150-1570-4a2c-9053-b7e5b058a340|3d56a4d1-f8de-483c-b7b1-5336dfb2fdd6",
-        "courtyards_overlap|128949999|100540001|0dfab596-e5f8-47fc-9183-955736867a77|bebefca1-3ad2-4ed1-95b2-72ea260db98f",
-        "courtyards_overlap|138500001|100150001|813d95e7-c05f-4921-b91d-bd7864476656|95d9b099-eaf4-4e59-8ddc-15807cd04903",
-        "courtyards_overlap|184019999|73405725|03700b26-a59f-416e-a4f0-1a48d271524e|5984db6b-7b93-4e4d-ac10-f4fbe5656ad2",
-        "courtyards_overlap|184019999|73408788|03700b26-a59f-416e-a4f0-1a48d271524e|5984db6b-7b93-4e4d-ac10-f4fbe5656ad2",
-        "courtyards_overlap|185609314|73250001|5984db6b-7b93-4e4d-ac10-f4fbe5656ad2|ce1bbb11-81ee-4734-890d-db222cfdbf83",
-        "courtyards_overlap|185636059|73250001|5984db6b-7b93-4e4d-ac10-f4fbe5656ad2|ce1bbb11-81ee-4734-890d-db222cfdbf83",
-        "courtyards_overlap|79019999|73431100|6d8fb447-1ae4-46fc-bf7f-43258d7c1787|7c4194ce-875e-406b-b60f-c3f41ad6ddcc",
-        "courtyards_overlap|79019999|73435897|6d8fb447-1ae4-46fc-bf7f-43258d7c1787|7c4194ce-875e-406b-b60f-c3f41ad6ddcc",
-        "courtyards_overlap|80109314|73250001|38098169-922a-49c4-89a7-cdda9c2c0927|7c4194ce-875e-406b-b60f-c3f41ad6ddcc",
-        "courtyards_overlap|80136059|73250001|38098169-922a-49c4-89a7-cdda9c2c0927|7c4194ce-875e-406b-b60f-c3f41ad6ddcc",
-        "items_not_allowed|78000000|70250000|1673e9f5-17b6-405b-81b9-95c766569cc0|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|78000000|70250000|7c4194ce-875e-406b-b60f-c3f41ad6ddcc|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|79000000|70000000|1673e9f5-17b6-405b-81b9-95c766569cc0|00000000-0000-0000-0000-000000000000",
-        "items_not_allowed|79000000|70000000|7c4194ce-875e-406b-b60f-c3f41ad6ddcc|00000000-0000-0000-0000-000000000000",
-        "unconnected_items|100075000|103975000|e5443b90-6610-4b7e-bd4e-17be3bc27c83|d08b38a5-f4f1-4977-b3c3-618dac97db2d"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -131,8 +110,6 @@
         "zones_intersect": "error"
       },
       "rules": {
-        "allow_blind_buried_vias": false,
-        "allow_microvias": false,
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
@@ -210,8 +187,7 @@
           "drill": 0.3
         }
       ],
-      "zones_allow_external_fillets": false,
-      "zones_use_no_outline": true
+      "zones_allow_external_fillets": false
     },
     "layer_presets": [],
     "viewports": []
@@ -436,7 +412,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "CyberBadge.kicad_pro",
+    "filename": "ledboad.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -472,7 +448,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "CyberBadge.step",
+      "step": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -501,18 +477,8 @@
       "version": 1
     },
     "net_format_name": "",
-    "ngspice": {
-      "fix_include_paths": true,
-      "fix_passive_vals": false,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 0,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
-    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -523,72 +489,8 @@
   },
   "sheets": [
     [
-      "0335a998-9fbe-49b9-adca-aa3d90d195f2",
+      "1181e967-9004-4c33-affd-84ef711a5b8e",
       ""
-    ],
-    [
-      "55174abd-2342-4b17-bfac-686c8e159bde",
-      "WS_2columns"
-    ],
-    [
-      "c2cc5748-f924-442d-9e82-d540d7216bb0",
-      "WS_2columns1"
-    ],
-    [
-      "b7059332-d558-47ef-8263-a1be57050c6d",
-      "WS_2columns2"
-    ],
-    [
-      "39b53d0c-1ce5-4daf-9ae3-fc9b3bf42ffc",
-      "WS_2columns3"
-    ],
-    [
-      "dbf216dd-2404-45aa-af17-5522e5ce77bf",
-      "WS_2columns4"
-    ],
-    [
-      "4ae90f84-cc58-4607-b578-0d6c597528fa",
-      "WS_2columns9"
-    ],
-    [
-      "2b5d2378-db88-46d2-b2d7-c8bb757e12ce",
-      "WS_2columns5"
-    ],
-    [
-      "828771f0-1a1d-4ebe-92c5-dc04b30d8895",
-      "WS_2columns8"
-    ],
-    [
-      "8f679ef3-eb2b-4da4-84b9-c93ab7bfa25e",
-      "WS_2columns7"
-    ],
-    [
-      "b97fe364-02ab-4816-8041-0231f16cd92d",
-      "WS_2columns6"
-    ],
-    [
-      "eee8c0a8-641e-4924-81da-4e5172896d52",
-      "WS_2columns11"
-    ],
-    [
-      "36e7a469-6a2b-4419-b56f-07970536b2b9",
-      "WS_2columns10"
-    ],
-    [
-      "0ae70c58-fa75-4a1b-84e9-b609c86f51f9",
-      "WS_2columns12"
-    ],
-    [
-      "4ad8b61e-ef5b-4f0c-b2a1-ac42f78a09b9",
-      "WS_2columns13"
-    ],
-    [
-      "8cd7af87-529a-44fe-9b3a-f412cd0b31d9",
-      "WS_2columns15"
-    ],
-    [
-      "4f7add5c-48be-486d-a225-c4a84f7ddda2",
-      "WS_2columns14"
     ]
   ],
   "text_variables": {}

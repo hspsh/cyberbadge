@@ -27,3 +27,5 @@ fp-info-cache
 
 *.STEP
 *.log
+
+**/STM-FW/**
