@@ -13,7 +13,7 @@ led_h = pitch;
 led_w = pitch;
 
 
-face_height = L*3;  // transparent diffuser face
+face_height = 0;  // transparent diffuser face
 pcb_height = 3; // PCB dist from diffures
 height = pcb_height + 3;
 button_height = 3 - 1.6 - 0.4;
@@ -21,46 +21,58 @@ button_height = 3 - 1.6 - 0.4;
 has_holder = false;
 
 module pcb () {
-    color("green") offset(r=0.3) import("outline.svg");
+    color("green") offset(r=0.3) import("../outline.svg");
 }
 
 module model () {
-    #translate([65.9,110,1+pcb_height]) rotate([0,180,0]) import("model.stl");
+    #translate([65.9,110,1+pcb_height]) rotate([0,180,0]) import("../model.stl");
 }
 
 module usb () {
-    color("red") offset(r=0.3) import("usb.svg");
+    color("red") offset(r=0.3) import("../usb.svg");
 }
 
 module switch () {
-    color("red") import("switch.svg");
+    color("red") import("../switch.svg");
 }
 
-
 module holder () {
-    color("red") offset(r=0.3) import("holder.svg");
+    color("red") offset(r=0.3) import("../holder.svg");
 }
 
 module holder_holes () {
-    color("red") import("holder_holes.svg");
+    color("red") import("../holder_holes.svg");
 }
 
 module buttons () {
-    color("red") offset(r=-0) import("buttons.svg");
+    color("red") offset(r=-0) import("../buttons.svg");
 }
 
 module buttons_area () {
-    color("red") offset(r=-0) import("buttons_area.svg");
+    //color("red") offset(r=-0) import("buttons_area.svg");
+}
+
+module new_button (){
+    cylinder(5,r=2.5, $fn=20);
+    translate([0,0,1]) square([7,3], center=true);
+}
+
+module new_buttons () {
+    // #color("red") offset(r=-2) linear_extrude(50) circle(1.5);
+    // render a cylinder
+    translate([110,40,-0.01]) new_button();
+    translate([100,40,-0.01]) new_button();
+    translate([90,40,-0.01]) new_button();
 }
 
 module holes() {
-    offset(r=-0.1) import("holes.svg");
+    offset(r=-0.1) import("../holes.svg");
 }
 
 module holes_standoffs () {
     color("orange") difference () {
-        offset(r=1.8) import("holes.svg");
-        offset(r=-0.4) import("holes.svg");
+        offset(r=1.8) import("../holes.svg");
+        offset(r=-0.4) import("../holes.svg");
     }
 }
 
@@ -76,7 +88,6 @@ module matrix_courtyard () {
     //import("matrix_courtyard.svg");
 }
 
-
 module matrix_diffuser () {
 
     translate([matrix_x,matrix_y])
@@ -84,9 +95,7 @@ module matrix_diffuser () {
     for (i = [0:N-1]) {
         translate([j * led_w, i * led_h, 0]) offset(r=-E/2) led();
     }
-    }
-    
-    
+    }    
 }
 
 module outer_outline(r=E) {
@@ -121,11 +130,12 @@ module cover() {
             }
             
         }
+        new_buttons();
         color("yellow") linear_extrude(pcb_height+1)
         matrix_diffuser();
     }
     
-    linear_extrude(pcb_height-button_height) color("red") buttons_area();
+    // linear_extrude(pcb_height-button_height) color("red") buttons_area();
         
     linear_extrude(face_height) {
         matrix_courtyard();
@@ -142,16 +152,37 @@ module faceplate() {
         linear_extrude(height) color("red") usb();
         translate([0,0,pcb_height-1.5]) linear_extrude(5) color("red") switch();  
         if (has_holder) linear_extrude(height) color("red") holder();
-        linear_extrude(height) color("red") offset(-0.2) buttons();
+        // linear_extrude(height) color("red") offset(-0.2) buttons();
         //translate([18, 3.3]) linear_extrude(L) text("CyberBadge 1.0.0", size=3, font="Iosevka");
+        cube([1000, 1000, 0.1], center=true);
     }
 }
 module notch () {
 translate([-73,43.5,5.4]) rotate([0,90,0]) cylinder(10,r=0.7,true, $fn=20);
 }
 
+module lol () {
+    sphere(2, $fn=40);
+    cylinder(2, r=2, $fn=40);
+}
+
+module resinglass () {
+    // lol();
+    minkowski() {
+        lol();
+        translate([-66,23, -1])
+            linear_extrude(height = 1.5) 
+            square([111, 27], center=true);
+    }
+}
 
 //cover();
 //model();
-//faceplate();
+faceplate();
+// color("grey",alpha=0.5)
+color("grey",alpha=0.1)
+difference() {
+    resinglass();
+    faceplate();
+}
 //notch();
