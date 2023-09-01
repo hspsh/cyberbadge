@@ -1,6 +1,0 @@
-#!/usr/bin/env bash 
-
-COMMIT=$(git rev-parse --short HEAD)
-echo "commit=\"${COMMIT}\";" > ./3d/commit.scad
-# git add ./3d/commit.scad
-# git commit --amend -C HEAD --no-verify
