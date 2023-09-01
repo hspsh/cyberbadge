@@ -16,7 +16,7 @@ led_w = pitch;
 face_height = L*3;  // transparent diffuser face
 pcb_height = 3; // PCB dist from diffures
 height = pcb_height + 3;
-button_height = 3 - 1.6 - 0.3;
+button_height = 3 - 1.6 - 0.4;
 
 has_holder = false;
 
@@ -60,7 +60,7 @@ module holes() {
 module holes_standoffs () {
     color("orange") difference () {
         offset(r=1.8) import("holes.svg");
-        offset(r=-0.5) import("holes.svg");
+        offset(r=-0.4) import("holes.svg");
     }
 }
 
@@ -146,8 +146,12 @@ module faceplate() {
         //translate([18, 3.3]) linear_extrude(L) text("CyberBadge 1.0.0", size=3, font="Iosevka");
     }
 }
+module notch () {
+translate([-73,43.5,5.4]) rotate([0,90,0]) cylinder(10,r=0.7,true, $fn=20);
+}
 
 
 //cover();
 //model();
 //faceplate();
+//notch();

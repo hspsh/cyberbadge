@@ -1,7 +1,7 @@
-commit="8ef4eea";
 
 include <diffuser.scad>
 
+include <commit.scad>
 /*skew takes an array of six angles:
  *x along y
  *x along z
@@ -21,7 +21,10 @@ multmatrix(matrix)
 children();
 }
 
-height_back = 8*L;
+height_back = 6*L;
+hl = 5.8;
+
+back_wall_w = 1;
 
 module mounts_courtyard() {
     color("green") offset(r=0.4) import("mounts_courtyard.svg");
@@ -42,11 +45,13 @@ module idontknow() {
     }
 }
 
+
+
 module idontknow_extruded(off=0) {
     a = 40;
     intersection() {
-        skew([0, 0, 0, 0, a, 0]) linear_extrude(5) offset(off) idontknow();
-        skew([0, 0, 0, 0, -a, 0]) linear_extrude(5) offset(off)idontknow();
+        skew([0, 0, 0, 0, a, 0]) linear_extrude(hl) offset(off) idontknow();
+        skew([0, 0, 0, 0, -a, 0]) linear_extrude(hl) offset(off)idontknow();
     }
 }
 
@@ -59,7 +64,7 @@ module insidespace (){
 }
 
 module angled_holder() {
-    skew([0, 0, 0, 0, -40, 0]) linear_extrude(5) 
+    skew([0, 0, 0, 0, -40, 0]) linear_extrude(hl) 
         offset(0.4) holder_holes();
     intersection() {
         cube([100,100,3.]);
@@ -92,18 +97,18 @@ module backplate() {
             translate([36, 38,0]) mirror([1,0,0]) linear_extrude() 
                 text(" ////", size=4, font="Iosevka:style=Extrabold Extended");
             if (has_holder) linear_extrude(height) color("red") holder();
-            translate([72, 12,height_back+5-L]) mirror([1,0,0]) linear_extrude(L*2, true) 
+            translate([72, 12,height_back+hl-L]) mirror([1,0,0]) linear_extrude(L*2, true) 
                 text("CyberBadge", size=6, font="Iosevka:style=Bold Extended");
-            translate([0,0,height_back+5-L]) linear_extrude(L*2, true) 
+            translate([0,0,height_back+hl-L]) linear_extrude(L*2, true) 
                 import("onoff.svg");
             
             // strap hole
-            translate([121,25,height_back+4]) rotate([90,0,0]) difference() {
+            translate([121,25,height_back+hl-1]) rotate([90,0,0]) difference() {
                 cylinder(h=4, d=6, $fn=30);
                 cylinder(h=10, d=3, $fn=30);
             }
             author_size = 4.5;
-            author_height = 5.7;
+            author_height = hl + .7;
             translate([20,31,author_height]) linear_extrude(2*L) 
                 text("2023", size=author_size, font="Iosevka:style=Extended");
             translate([20,24,author_height]) linear_extrude(2*L) 
@@ -123,4 +128,7 @@ module backplate() {
 
 
 //#color("grey") faceplate();
+difference() {
 backplate();
+    translate([0,.2,1.2]) notch();
+}
