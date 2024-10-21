@@ -1,0 +1,387 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "5d954f85-be76-40b4-8c24-416cbea9ec49")
+	(paper "A4")
+	(lib_symbols
+		(symbol "easyeda2kicad:CJX3139K"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CJX3139K"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "easyeda2kicad:SOT-563_L1.6-W1.2-P0.50-LS1.6-BR"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/MOSFET_CJ-CJX3139K_C504144.html"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part" "C504144"
+				(at 0 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CJX3139K_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -3.81 3.81)
+					(radius 0.38)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "S1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "G1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "S2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "G2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "D1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(hierarchical_label "OUT"
+		(shape input)
+		(at 125.73 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "37c13c6a-04d6-4737-bf86-036af7ffc56c")
+	)
+	(hierarchical_label "GATE"
+		(shape input)
+		(at 125.73 67.31 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50acdfc7-51ca-48a0-a11d-959fc5205574")
+	)
+	(hierarchical_label "VDD"
+		(shape input)
+		(at 125.73 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6018e492-70d3-444b-b589-5917014e9c8c")
+	)
+	(hierarchical_label "VDD"
+		(shape input)
+		(at 110.49 64.77 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7fc4441c-9135-407c-8ef4-751b6477da56")
+	)
+	(hierarchical_label "GATE"
+		(shape input)
+		(at 110.49 67.31 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8925be93-51ad-4b7d-894b-bea6043b87cf")
+	)
+	(hierarchical_label "OUT"
+		(shape input)
+		(at 110.49 69.85 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e810d598-b2cc-42a8-964d-d08af0d7f738")
+	)
+	(symbol
+		(lib_id "easyeda2kicad:CJX3139K")
+		(at 118.11 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a868aa4a-9655-4439-a5cd-7433f9a97220")
+		(property "Reference" "Q11"
+			(at 118.11 58.2125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CJX3139K"
+			(at 118.11 60.6368 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:SOT-563_L1.6-W1.2-P0.50-LS1.6-BR"
+			(at 118.11 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/MOSFET_CJ-CJX3139K_C504144.html"
+			(at 118.11 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C504144"
+			(at 118.11 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c88b256-942b-4571-a06a-812c40e2955f")
+		)
+		(pin "2"
+			(uuid "b6b41404-dfee-4f5e-903f-2bea5a588449")
+		)
+		(pin "4"
+			(uuid "7146cb69-73e9-45fc-8f9c-b0b0a2dd4cc5")
+		)
+		(pin "6"
+			(uuid "7791fb68-f79a-4186-9bcd-f0fb00f5670d")
+		)
+		(pin "3"
+			(uuid "6de47178-5aec-4c0d-9a39-c769607d4469")
+		)
+		(pin "5"
+			(uuid "273b1450-7e6c-42d6-9640-01b8b7d13860")
+		)
+		(instances
+			(project "ledboad"
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/2c989122-9413-4567-ad49-a0a8fdd84c9e"
+					(reference "Q11")
+					(unit 1)
+				)
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/37f1eb28-c6c2-4963-ad85-02261337fcd5"
+					(reference "Q13")
+					(unit 1)
+				)
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/5e5c82c0-c634-4a6d-9aec-cf782d5115f3"
+					(reference "Q16")
+					(unit 1)
+				)
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/914c1bf9-564c-4af5-9f2f-ea2db84547a0"
+					(reference "Q15")
+					(unit 1)
+				)
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/a05b6e25-1b46-4c9d-9b95-aad0ca8f8993"
+					(reference "Q12")
+					(unit 1)
+				)
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/aee24fb4-61db-48a9-9391-6fe66113c1c1"
+					(reference "Q14")
+					(unit 1)
+				)
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/ccc0938c-ff08-4816-a44c-3bd7c06c9ec1"
+					(reference "Q9")
+					(unit 1)
+				)
+				(path "/1181e967-9004-4c33-affd-84ef711a5b8e/dae4ae84-5ffe-458e-96da-5fbfe8bd90ce"
+					(reference "Q10")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

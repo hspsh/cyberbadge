@@ -63,19 +63,21 @@ public:
     setRow(rowNum);
 
 
-    delayMicroseconds(delayVal);
+    delayMicroseconds(100);
     digitalWrite(LATCH_PIN, LOW);
     // delay(1);
     digitalWrite(LATCH_PIN, HIGH);
   }
 
   void drawFrame(){
-    for (int line = 0; line < 8; line++) {
-      uint8_t *pattern = getPattern(line);
+    for (int line = 0; line < 1; line++) {
+      // uint8_t *pattern = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
       for (int i = 0; i < 12; i++) {
-        lineBuffer[i] = pattern[i];
+        lineBuffer[i] =getGreenPattern(i+2);
       }
       spewBuf();
+      drawRow(line);
+      sleep(1);
     }
   }
 

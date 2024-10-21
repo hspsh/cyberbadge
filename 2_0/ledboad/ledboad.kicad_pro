@@ -600,6 +600,38 @@
     [
       "1181e967-9004-4c33-affd-84ef711a5b8e",
       "Root"
+    ],
+    [
+      "ccc0938c-ff08-4816-a44c-3bd7c06c9ec1",
+      "PMOS"
+    ],
+    [
+      "dae4ae84-5ffe-458e-96da-5fbfe8bd90ce",
+      "PMOS1"
+    ],
+    [
+      "2c989122-9413-4567-ad49-a0a8fdd84c9e",
+      "PMOS2"
+    ],
+    [
+      "a05b6e25-1b46-4c9d-9b95-aad0ca8f8993",
+      "PMOS3"
+    ],
+    [
+      "37f1eb28-c6c2-4963-ad85-02261337fcd5",
+      "PMOS4"
+    ],
+    [
+      "aee24fb4-61db-48a9-9391-6fe66113c1c1",
+      "PMOS5"
+    ],
+    [
+      "914c1bf9-564c-4af5-9f2f-ea2db84547a0",
+      "PMOS6"
+    ],
+    [
+      "5e5c82c0-c634-4a6d-9aec-cf782d5115f3",
+      "PMOS7"
     ]
   ],
   "text_variables": {}
