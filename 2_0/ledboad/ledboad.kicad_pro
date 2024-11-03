@@ -58,7 +58,17 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|108350001|43550001|4b879cc4-ea4e-42cb-b228-0e7a7b46a3e4|7e14e83a-930e-4388-9e99-8d28cf7b2ea5",
+        "courtyards_overlap|119510001|43340001|25d76464-b60a-495e-b4c8-1726b3d95504|273f813b-d784-46c7-a7c5-6df63e9756be",
+        "courtyards_overlap|130570001|43550001|10187004-59c2-46de-a2af-efc72e3ec575|e077d0c4-b3ce-4b55-95d8-c188fa459ee2",
+        "courtyards_overlap|130590001|49740001|10187004-59c2-46de-a2af-efc72e3ec575|19cc88fc-5aea-4325-828b-7d5d74f4caec",
+        "courtyards_overlap|133049999|45950001|5bf3b403-b474-4f13-8c5d-237a747abf86|3ad9e63f-41ad-41e5-ad42-765f748e51ba",
+        "courtyards_overlap|133049999|48250001|7043fa5b-0107-4626-81b8-4c3c36c911d0|5bf3b403-b474-4f13-8c5d-237a747abf86",
+        "courtyards_overlap|94390001|43040001|3de73c8b-d08f-4405-9c7e-5aea75f6ee90|e2beb972-512c-490b-bac1-2c8c62852d24",
+        "courtyards_overlap|96209999|43550001|42c096d0-f928-4b17-aac7-576873a9662b|e2beb972-512c-490b-bac1-2c8c62852d24",
+        "footprint_type_mismatch|90000000|48310000|3de73c8b-d08f-4405-9c7e-5aea75f6ee90|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -460,7 +470,7 @@
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.18,
+        "clearance": 0.168,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -549,11 +559,35 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part",
+          "name": "LCSC Part",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },

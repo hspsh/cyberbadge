@@ -320,8 +320,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C504144"
+		(property "LCSC Part" ""
 			(at 118.11 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C504144"
+			(at 118.11 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
